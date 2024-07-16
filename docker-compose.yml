@@ -29,8 +29,13 @@ services:
 
   phpmyadmin:
     image: phpmyadmin
+    container_name: phpmyadmin
+    restart: always
+    environment:
+      PMA_HOST: mysql
+      MYSQL_ROOT_PASSWORD: bp1234 
     ports:
-      - 81:80
+      - "81:80"
 
 
 volumes:
