@@ -106,9 +106,26 @@ sudo PATH_ACCESS_LOG=<directory_path>/access.log PATH_ERROR_LOG=<directory_path>
 ```
 - **Cenário 3:**
 	- Antes de subir os containers para o python e mysql será necessário subir o container do nginx, sendo possível realizar com os seguintes comandos:
+	- O servidor nginx vai estar disponível na url: [Welcome nginx](http://localhost:8080/)
 ```shell
 docker-compose -f nginx/docker-compose.yaml up -d && PATH_ACCESS_LOG=./nginx/logs/access.log PATH_ERROR_LOG=./nginx/logs/error.log docker-compose up -d
 ```
+
+### Acessar os dados inseridos:
+É possível acessar tanto por interface gráfica(PhpMyAdmin) quanto por linha de comando.
+Lembrando que os dados serão populados apenas após a primeira execução do código
+- Para acessar a interface gráfica: [PhpMyAdmin](http://localhost:81)
+	- user: root
+	- password:bp1234
+- Para acessar por linha de comando:
+```shell
+docker exec -it mysql /bin/bash
+```
+Dentro do container:
+```shel
+mysql -u root -p
+```
+password:bp1234
 
 ### Parando os containers em cada cenário:
 - **Cenário 1:**
@@ -125,7 +142,6 @@ sudo PATH_ACCESS_LOG=<directory_path>/access.log PATH_ERROR_LOG=<directory_path>
 ```shell
 docker-compose -f nginx/docker-compose.yaml down && PATH_ACCESS_LOG=./nginx/logs/access.log PATH_ERROR_LOG=./nginx/logs/error.log docker-compose down
 ```
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Observação:
