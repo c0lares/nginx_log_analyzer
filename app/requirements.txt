@@ -1,0 +1,7 @@
+peewee 
+mysql-connector-python
+ua-parser
+pymysql
+geoip2
+cryptography
+python-dotenv
