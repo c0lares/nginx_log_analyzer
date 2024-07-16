@@ -32,7 +32,7 @@ Após a varredura caso tenha alguma atividade suspeita será disparado um email pa
 
 Os parâmetros para análise de segurança do log são totalmente customizáveis, pois algumas questões podem variar dependendo da situação do projeto.
 
-**Como funciona**: Um container será executado juntamente com um crontab para automatizar a execução, fazendo com que o scraping de log seja executado de 5 em 5 minutos todos os dias, armazenando todos os dados novos no mysql, que também está rodando em um container separadamente.
+**Como funciona**: Um container será executado juntamente com um crontab para automatizar a execução, fazendo com que o scraping de log seja executado de minuto em minuto todos os dias, armazenando todos os dados novos no mysql, que também está rodando em um container separadamente.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
