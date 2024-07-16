@@ -14,6 +14,7 @@ services:
       - ${PATH_ACCESS_LOG}:/project/nginx_logs/access.log
       - ${PATH_ERROR_LOG}:/project/nginx_logs/error.log
       - ./app/app_log/app.log:/var/log/cron.log
+
   mysql:
     image: mysql:8.4.1
     container_name: mysql
@@ -30,6 +31,7 @@ services:
     image: phpmyadmin
     ports:
       - 81:80
+
 
 volumes:
   mysql-data:

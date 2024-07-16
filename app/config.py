@@ -1,7 +1,6 @@
 import logging
 from dotenv import dotenv_values
 
-from dotenv import dotenv_values
 
 # Carrega todas as variáveis de ambiente do arquivo .env
 config = dotenv_values(".env")
