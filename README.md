@@ -80,6 +80,7 @@ Os parâmetros para análise de segurança do log são totalmente customizáveis, poi
 	EMAIL_PASSWORD = '<your_email_app_key>'
 	EMAILS_ADMINS = '<email_admin1>@gmail.com,<email_admin2>@gmail.com'
 	 ```
+-  O crontab está disponível no caminho app/crontab, a execução está como default de minuto em minuto, porém é possível mudar o intervalo de tempo caso necessário.... para a mudança recomendo acessar o site [crontab.guru](https://crontab.guru/#*_*_*_*_*)
 
 
 ## Subir os Containers:
